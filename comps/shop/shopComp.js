@@ -17,13 +17,12 @@ export const shopFunc = (contentCollection) => {
                     </div>
                    <div style="background: ${film.preview}" class="previewIMG"></div>
                     <div class="descr">${film.desrc}</div>
-                    
             </div>
         `
     });
 
     orderBTN.addEventListener("click", () => {
-        const orderFilmName = $('.this').closest('.film').children('.filmName').text();
+        const orderFilmName = $('.addToCard').closest('.film').children('.filmName').text();
         console.log(orderFilmName);
         amount += 1;
     })
