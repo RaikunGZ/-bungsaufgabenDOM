@@ -3,7 +3,7 @@ import { basketFunc } from "./orderComp.js"
 
 export const shopFunc = (contentCollection) => {
     const shopContent = document.querySelector('#shopContent')
-    const orderBTN = document.querySelector('.addToCard')
+    const addToCardBTN = document.querySelector('.addToCard')
     let amount = 0;
 
     contentCollection.forEach(film => {
@@ -21,8 +21,8 @@ export const shopFunc = (contentCollection) => {
         `
     });
 
-    orderBTN.addEventListener("click", () => {
-        const orderFilmName = $('.addToCard').closest('.film').children('.filmName').text();
+    addToCardBTN.addEventListener("click", () => {
+        const orderFilmName = addToCardBTN.closest(contentCollection.film.filmTitle).text();
         console.log(orderFilmName);
         amount += 1;
     })

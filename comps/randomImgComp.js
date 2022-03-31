@@ -6,6 +6,5 @@ export const randomImgFunc = () => {
     showImgBTN.addEventListener("click", () => {
         const count = Math.floor(Math.random() * imgCollection.length)
         imgContainer.innerHTML = `<img src="./images/${imgCollection[count]}"/>`
-        imgContainer.style = ``
     })
 }
