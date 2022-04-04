@@ -33,6 +33,21 @@ colorDropdownFunc()
 // Aufgabe 7
 randomImgFunc()
 
+// Aufgabe 9
+window.addEventListener("resize", () =>{
+    let w = document.documentElement.clientWidth;
+    let h = document.documentElement.clientHeight;
+    
+    const windowSizeFunc = () => {
+        document.querySelector('.whOutput').innerText = `width: ${w}px
+        height: ${h}px`
+    }
+    windowSizeFunc()
+})
+
+
+
+
 // Aufgabe 10
 navContentChangFunc()
 
@@ -84,3 +99,5 @@ searchBTN.addEventListener("click", (e) => {
 shopFunc(contentCollection)
 
 // Zusatz Bestellfeld
+
+

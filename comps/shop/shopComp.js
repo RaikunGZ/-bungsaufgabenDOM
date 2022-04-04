@@ -3,7 +3,6 @@ import { basketFunc } from "./orderComp.js"
 
 export const shopFunc = (contentCollection) => {
     const shopContent = document.querySelector('#shopContent')
-    const addToCardBTN = document.querySelector('.addToCard')
     let amount = 0;
 
     contentCollection.forEach(film => {
@@ -21,11 +20,21 @@ export const shopFunc = (contentCollection) => {
         `
     });
 
+    const addToCardBTN = document.querySelector('.addToCard')
+    
     addToCardBTN.addEventListener("click", () => {
-        const orderFilmName = addToCardBTN.closest(contentCollection.film.filmTitle).text();
-        console.log(orderFilmName);
-        amount += 1;
-    })
+            const addOnClick = addToCardBTN.closest(".film")
+            const orderFilmName = addOnClick.querySelector('.filmTitle');
+            const orderFilmIMG = addOnClick.querySelector('.previewIMG');
+            const orderFilmPrice = addToCardBTN.closest(".buy").querySelector('div');
+            
+            console.log(orderFilmIMG, orderFilmName, orderFilmPrice);
+            amount += 1;
+
+            console.log(amount)
+       })
+    
+    
 
     const navShop = document.querySelector('#shop')
     const basket = document.querySelector('#basket')
