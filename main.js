@@ -33,6 +33,30 @@ colorDropdownFunc()
 // Aufgabe 7
 randomImgFunc()
 
+// Aufgabe 8
+document.querySelector('#strongPara').innerHTML = `
+        <p>
+            Lorem, ipsum dolor sit <strong>amet consectetur adipisicing</strong> elit. Odit, <strong>consectetur</strong>? Praesentium, omnis.
+        </p>
+    `
+
+const strongBTN = document.querySelector('#strongBTN')
+
+strongBTN.addEventListener("click", () => {
+    const strongElements = document.querySelectorAll('strong')
+    strongElements.forEach(strongElem => {
+        if(strongElem.style.color !== "red"){
+            strongElem.style.color = "red"
+        }else{
+            strongElem.style.color = "black"
+        }
+    });
+})
+
+const strongFunc = () => {
+    
+}
+
 // Aufgabe 9
 window.addEventListener("resize", () =>{
     let w = document.documentElement.clientWidth;
